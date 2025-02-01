@@ -1,52 +1,46 @@
 <template>
-  <div ref="page" class="flex flex-col items-center font-CustomFont opacity-0 transition-opacity duration-700 ease-in-out">
+  <div class="flex flex-col items-center font-CustomFont">
     <!-- Hero section -->
     <div class="w-[85%] h-[20%] grid grid-cols-[1fr_1fr] gap-3 px-5 max-md:grid-cols-1 max-sm:px-3">
       <!-- Left Hero Card -->
-      <transition name="fade" appear>
-        <div class="h-full">
-          <HeroCard
-            image="src/assets/images/HeroImage1.jpg"
-            altText="Person overwhelmed with paperwork"
-            title="Say Bye to paperwork. Let us get the job done for you!"
-            buttonText="Learn About Our Tax Services"
-            className="h-full"
-            titleClass="text-xl sm:text-2xl md:text-3xl"
-            subTitleClass="text-sm sm:text-base"
-            buttonClass="text-sm sm:text-base"
-            href="/TaxView"
-          />
-        </div>
-      </transition>
+      <div class="h-full">
+        <HeroCard
+          image="src/assets/images/HeroImage1.jpg"
+          altText="Person overwhelmed with paperwork"
+          title="Say Bye to paperwork. Let us get the job done for you!"
+          buttonText="Learn About Our Tax Services"
+          className="h-full"
+          titleClass="text-xl sm:text-2xl md:text-3xl"
+          subTitleClass="text-sm sm:text-base"
+          buttonClass="text-sm sm:text-base"
+          href="/TaxView"
+        />
+      </div>
 
       <!-- Right Hero Cards -->
       <div class="flex flex-col gap-5 h-full">
-        <transition name="fade" appear>
-          <HeroCard
-            image="src/assets/images/HeroImage2.jpg"
-            altText="Professional consultant"
-            title="Our goal is to make the process stress-free for you"
-            buttonText="Learn About Our Visa Services"
-            className="h-[calc(50%-0.625rem)]"
-            titleClass="text-lg sm:text-xl md:text-2xl"
-            subTitleClass="text-sm sm:text-base"
-            buttonClass="text-sm sm:text-base"
-            href="/VisaView"
-          />
-        </transition>
-        <transition name="fade" appear>
-          <HeroCard
-            image="https://images.unsplash.com/photo-1557425955-df376b5903c8"
-            altText="Professional handshake"
-            title="Expert Help when you need it!"
-            buttonText="Learn More About us"
-            className="h-[calc(50%-0.625rem)]"
-            titleClass="text-lg sm:text-xl md:text-2xl"
-            subTitleClass="text-sm sm:text-base"
-            buttonClass="text-sm sm:text-base"
-            href="/AboutView"
-          />
-        </transition>
+        <HeroCard
+          image="src/assets/images/HeroImage2.jpg"
+          altText="Professional consultant"
+          title="Our goal is to make the process stress-free for you"
+          buttonText="Learn About Our Visa Services"
+          className="h-[calc(50%-0.625rem)]"
+          titleClass="text-lg sm:text-xl md:text-2xl"
+          subTitleClass="text-sm sm:text-base"
+          buttonClass="text-sm sm:text-base"
+          href="/VisaView"
+        />
+        <HeroCard
+          image="https://images.unsplash.com/photo-1557425955-df376b5903c8"
+          altText="Professional handshake"
+          title="Expert Help when you need it!"
+          buttonText="Learn More About us"
+          className="h-[calc(50%-0.625rem)]"
+          titleClass="text-lg sm:text-xl md:text-2xl"
+          subTitleClass="text-sm sm:text-base"
+          buttonClass="text-sm sm:text-base"
+          href="/AboutView"
+        />
       </div>
     </div>
 
@@ -201,7 +195,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted  } from 'vue';
+import { ref } from 'vue';
 import HeroCard from "../components/HeroCard.vue";
 import ServiceCard from "../components/ServiceCard.vue";
 import PricingCard from "../components/PricingCard.vue";
@@ -209,42 +203,4 @@ import PaymentMethods from '@/components/PaymentMethods.vue';
 
 // Reactive state for active tab
 const activeTab = ref('visa'); // Default to 'visa'
-const page = ref(null);
-const pricingTitle = ref(null);
-const pricingSubtitle = ref(null);
-
-onMounted(() => {
-  // Fade in the whole page
-  if (page.value) {
-    page.value.classList.remove('opacity-0');
-  }
-  
-  // Slide-in Pricing Section
-  setTimeout(() => {
-    if (pricingTitle.value && pricingSubtitle.value) {
-      pricingTitle.value.classList.remove('opacity-0', 'translate-y-4');
-      pricingSubtitle.value.classList.remove('opacity-0', 'translate-y-4');
-    }
-  }, 500);
-});
 </script>
-
-<style scoped>
-/* Fade Animation */
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
-}
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-  transform: translateY(10px);
-}
-
-/* Slide Animation */
-.slide-enter-active, .slide-leave-active {
-  transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
-}
-.slide-enter-from, .slide-leave-to {
-  opacity: 0;
-  transform: translateX(-20px);
-}
-</style>
