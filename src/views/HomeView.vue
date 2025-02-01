@@ -5,7 +5,7 @@
       <!-- Left Hero Card -->
       <div class="h-full">
         <HeroCard
-          image="src/assets/images/HeroImage1.jpg"
+          image="../assets/images/HeroImage1.jpg"
           altText="Person overwhelmed with paperwork"
           title="Say Bye to paperwork. Let us get the job done for you!"
           buttonText="Learn About Our Tax Services"
@@ -20,7 +20,7 @@
       <!-- Right Hero Cards -->
       <div class="flex flex-col gap-5 h-full">
         <HeroCard
-          image="src/assets/images/HeroImage2.jpg"
+          image="../assets/images/HeroImage2.jpg"
           altText="Professional consultant"
           title="Our goal is to make the process stress-free for you"
           buttonText="Learn About Our Visa Services"
