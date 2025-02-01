@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "CustomFont";
+    src: url("./fonts/AvenirNextforINTUIT-Demi.1.woff2") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}@font-face {
+    font-family: "CustomFont";
+    src: url("./fonts/AvenirNextforINTUIT-Medium.1.woff2") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: "CustomFontL";
+    src: url("./fonts/AvenirNextforINTUIT-Regular.1.woff2") format("truetype");
+    font-weight: lighter;
+    font-style: normal;
+}@font-face {
+    font-family: "CustomFont";
+    src: url("./fonts/AvenirNextforINTUIT-Regular.2.woff2") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
