@@ -8,7 +8,7 @@
           <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             <!-- Left Side (Text Content) -->
             <div class="mb-12 lg:mb-0 hero-content">
-              <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl mb-6 leading-tight">
+              <h1 class="text-4xl font-bold text-gray-900 sm:text-4xl md:text-6xl mb-6 leading-tight">
                 <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
                   Maximize your tax refund
                 </span>

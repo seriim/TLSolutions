@@ -9,7 +9,7 @@
             <transition name="fade" appear>
               <div class="px-4 sm:px-6 lg:px-8">
                 <div class="text-left">
-                  <h1 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl md:text-5xl">
+                  <h1 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl md:text-5xl leading-tight">
                     <span class="block xl:inline">Your trusted partner for</span>
                     <span class="block text-blue-600 xl:inline">
                       J1 Visa Services and Tax Returns!

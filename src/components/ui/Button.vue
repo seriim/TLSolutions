@@ -8,13 +8,14 @@
     ]"
     v-bind="$attrs"
   >
-    <a :href="href" class="w-full h-full flex items-center justify-center">
+    <RouterLink :to="href" class="w-full h-full flex items-center justify-center">
       <slot />
-    </a>
+    </RouterLink>
   </button>
 </template>
 
 <script setup>
+import { RouterLink } from 'vue-router';
 defineProps({
   size: {
     type: String,

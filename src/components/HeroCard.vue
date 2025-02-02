@@ -14,7 +14,7 @@
         </p>
       </div>
       <button
-        :class="`text-white font-medium cursor-pointer transition-all duration-[0.2s] bg-black/40 hover:bg-black/60 backdrop-blur-sm px-6 py-3 rounded-lg ${buttonClass}`"
+        :class="`text-white font-medium cursor-pointer transition-all duration-[0.2s] bg-black hover:bg-black/70 px-6 py-3 rounded-lg ${buttonClass}`"
       >
         <RouterLink :to="href">
           {{ buttonText }}
