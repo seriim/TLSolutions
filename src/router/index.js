@@ -5,6 +5,8 @@ import AboutView from '@/views/AboutView.vue'
 import ContactView from '@/views/ContactView.vue'
 import TaxView from '@/views/TaxView.vue'
 import NotFoundView from '@/views/NotFound.vue'
+import TermsOfService from '@/views/TermsOfService.vue'
+import PrivacyPolicy from '@/views/PrivacyPolicy.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,6 +17,8 @@ const router = createRouter({
     {path: '/ContactView',name: 'ContactView',component: ContactView,},
     {path: '/TaxView',name: 'TaxView',component: TaxView,},
     {path: '/:pathMatch(.*)*',name: 'not-found',component: NotFoundView,},
+    {path: '/Terms',name: 'Terms',component: TermsOfService,},
+    {path: '/Privacy',name: 'Privacy',component: PrivacyPolicy,},
   ],
 })
 
