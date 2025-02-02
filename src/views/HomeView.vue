@@ -20,7 +20,7 @@
       <!-- Right Hero Cards -->
       <div class="flex flex-col gap-5 h-full">
         <HeroCard
-          image="/assets/images/HeroImageTwo.jpg"
+          image="public/HeroImage2.jpg"
           altText="Professional consultant"
           title="Our goal is to make the process stress-free for you"
           buttonText="Learn About Our Visa Services"
