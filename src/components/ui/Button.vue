@@ -8,7 +8,13 @@
     ]"
     v-bind="$attrs"
   >
-    <RouterLink :to="href" class="w-full h-full flex items-center justify-center">
+    <!-- External Link (Opens in New Tab) -->
+    <a v-if="link" :href="link" target="_blank" rel="noopener noreferrer" class="w-full h-full flex items-center justify-center">
+      <slot />
+    </a>
+
+    <!-- Internal Navigation -->
+    <RouterLink v-else :to="href" class="w-full h-full flex items-center justify-center" @click.native="scrollToTop">
       <slot />
     </RouterLink>
   </button>
@@ -16,6 +22,7 @@
 
 <script setup>
 import { RouterLink } from 'vue-router';
+
 defineProps({
   size: {
     type: String,
@@ -29,9 +36,21 @@ defineProps({
   },
   href: {
     type: String,
-    default: '#',
+    default: '#', // Internal navigation (Vue Router)
+  },
+  link: {
+    type: String,
+    default: '', // External link (opens in new tab)
   },
 });
+
+// Function to scroll to the top smoothly
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
 </script>
 
 <style scoped>

@@ -18,7 +18,7 @@
             <Button
               size="lg"
               class="text-lg px-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transform transition-all duration-200 hover:scale-105"
-              href="https://docs.google.com/forms/d/e/1FAIpQLScb6aE3MMJz6SltJxCZ1SAiWMkU_VnnlOYlW_BhnDs0_3W_cw/viewform?usp=header"
+              link="https://forms.gle/5P1TXZyAt7EJ4X9f9"
             >
               Get Started
             </Button>
@@ -54,7 +54,7 @@
               {{ index + 1 }}
             </span>
             <p class="flex-grow text-gray-700">{{ step }}</p>
-            <ArrowRight class="w-5 h-5 text-blue-600" />
+            <ArrowRight class="w-5 h-5 text-blue-600 max-sm:hidden  md:w-4 md:h-4 lg:w-5 lg:h-5" />
           </div>
         </div>
       </div>

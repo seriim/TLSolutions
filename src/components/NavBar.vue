@@ -16,6 +16,7 @@
         :to="link.to"
         class="relative text-gray-600 hover:text-black transition-colors duration-200 font-semibold text-sm tracking-wide px-2 py-1"
         :class="{ 'active-link': isActive(link.to) }"
+        @click.native="scrollToTop"
       >
         {{ link.label }}
       </router-link>
@@ -53,6 +54,7 @@
             :to="link.to"
             class="text-gray-700 hover:text-black transition-colors duration-200 py-3 px-4 rounded-md hover:bg-gray-50 font-semibold"
             :class="{ 'active-link': isActive(link.to) }"
+            @click.native="scrollToTop"
             @click="closeSheet"
           >
             {{ link.label }}
@@ -101,6 +103,13 @@ const openSheet = () => {
 // Close Sheet
 const closeSheet = () => {
   isOpen.value = false;
+};
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 };
 </script>
 

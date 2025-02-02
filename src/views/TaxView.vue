@@ -20,7 +20,7 @@
               <Button 
                 size="lg" 
                 class="text-lg px-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transform transition-all duration-200 hover:scale-105"
-                href="https://docs.google.com/forms/d/1DLylSX4cWiL1xpnoGOwN2cUxFNbXi4gcmOxg1WHnRsg/edit"
+                link="https://docs.google.com/forms/d/1DLylSX4cWiL1xpnoGOwN2cUxFNbXi4gcmOxg1WHnRsg/edit"
               >
                 Apply Now
               </Button>

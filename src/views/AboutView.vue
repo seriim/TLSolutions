@@ -16,7 +16,7 @@
                     </span>
                   </h1>
                   <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl">
-                    Let J1 Solutions be your trusted partner. We provide comprehensive support
+                    Let TL Solutions be your trusted partner. We provide comprehensive support
                     for your visa journey and ensure accurate tax compliance. Reach out to us
                     today and take the next step with confidence.
                   </p>
@@ -63,7 +63,7 @@
                 Who We Are
               </h2>
               <p class="mt-4 text-lg leading-6 text-gray-500">
-                J1 Solutions was founded with a vision to support J1 students through personalized and reliable services. 
+                TL Solutions was founded with a vision to support J1 students through personalized and reliable services. 
                 We understand the challenges you face and aim to ease your journey with expert guidance and unmatched professionalism.
               </p>
             </div>

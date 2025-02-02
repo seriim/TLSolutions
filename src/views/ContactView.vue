@@ -77,7 +77,7 @@
             </div>
           </transition>
           <transition name="fade" appear>
-            <div class="mt-8 lg:mt-0">
+            <div class="mt-8 lg:mt-0 max-sm:hidden" >
               <img
                 class="h-full w-full object-cover rounded-lg shadow-xl"
                 src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21"
