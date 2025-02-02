@@ -1,21 +1,21 @@
 <template>
   <div class="flex flex-col items-center font-CustomFont">
     <!-- Hero section -->
-    <div class="w-full max-w-7xl mx-auto px-4 py-20 fade-in">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 fade-in">
       <div class="flex flex-col lg:flex-row gap-8 items-center">
         <!-- Left content -->
-        <div class="flex-1 text-left slide-left">
-          <h1 class="text-5xl md:text-5xl lg:text-5xl font-bold leading-tight mb-6">
+        <div class="flex-1 text-center lg:text-left slide-left">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
             Professional Tax & Visa
             <span class="text-blue-600 block">Solutions</span>
           </h1>
-          <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl">
+          <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
             Let our experts handle your paperwork while you focus on what matters most. We provide seamless tax and visa services tailored to your needs.
           </p>
-          <div class="flex flex-wrap gap-4">
-            <Button size="lg" class="fade-in-delay hover:bg-[#232323]" href="/TaxView">
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+            <Button size="lg max-sm:md" class="fade-in-delay hover:bg-[#232323]" href="/TaxView">
               Tax Services
-              <ArrowRight class="ml-2 h-5 w-5" />
+              <ArrowRight class="ml-2 h-5 w-3" />
             </Button>
             <Button size="lg" class="fade-in-delay" variant="outline" href="/VisaView">
               Visa Services
@@ -24,13 +24,13 @@
         </div>
 
         <!-- Right content -->
-        <div class="flex-1 slide-right">
+        <div class="flex-1 w-full lg:w-auto slide-right max-sm:hidden">
           <HeroCard
             image="https://ezy2nf0evx.ufs.sh/f/esJyRudlUqbDlldud6DYWUj6G0SZLHuzv2kQt37XN5MyVqoT"
             altText="Professional tax services"
             title="Expert Help when you need it!"
-            buttonText=" More About Us"
-            className="h-[400px] w-[550px]"
+            buttonText="More About Us"
+            className="h-[300px] sm:h-[350px] md:h-[400px] w-full max-w-[550px] mx-auto lg:mx-0"
             href="/AboutView"
           />
         </div>
