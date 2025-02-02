@@ -5,7 +5,7 @@
       <!-- Left Hero Card -->
       <div class="h-full">
         <HeroCard
-          image="assets/images/HeroImageOne.jpg"
+          image="src/assets/images/HeroImage1.jpg"
           altText="Person overwhelmed with paperwork"
           title="Say Bye to paperwork. Let us get the job done for you!"
           buttonText="Learn About Our Tax Services"
