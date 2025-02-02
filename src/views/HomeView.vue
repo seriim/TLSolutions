@@ -5,7 +5,7 @@
       <!-- Left Hero Card -->
       <div class="h-full">
         <HeroCard
-          image="https://ezy2nf0evx.ufs.sh/f/esJyRudlUqbDlldud6DYWUj6G0SZLHuzv2kQt37XN5MyVqoT"
+          image="https://ezy2nf0evx.ufs.sh/f/esJyRudlUqbDyDLXQDTEdQ0e7u2VCb1XBLWgZAn4lr5ONG3h"
           altText="Person overwhelmed with paperwork"
           title="Say Bye to paperwork. Let us get the job done for you!"
           buttonText="Learn About Our Tax Services"
@@ -20,7 +20,7 @@
       <!-- Right Hero Cards -->
       <div class="flex flex-col gap-5 h-full">
         <HeroCard
-          image="https://ezy2nf0evx.ufs.sh/f/esJyRudlUqbDyDLXQDTEdQ0e7u2VCb1XBLWgZAn4lr5ONG3h"
+          image="https://ezy2nf0evx.ufs.sh/f/esJyRudlUqbDlldud6DYWUj6G0SZLHuzv2kQt37XN5MyVqoT"
           altText="Professional consultant"
           title="Our goal is to make the process stress-free for you"
           buttonText="Learn About Our Visa Services"
