@@ -16,9 +16,9 @@
       <button
         :class="`text-white font-medium cursor-pointer transition-all duration-[0.2s] bg-black/40 hover:bg-black/60 backdrop-blur-sm px-6 py-3 rounded-lg ${buttonClass}`"
       >
-        <a :href="href">
+        <RouterLink :to="href">
           {{ buttonText }}
-        </a>  
+        </RouterLink>  
       </button>
     </div>
   </div>
