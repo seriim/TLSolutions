@@ -13,9 +13,9 @@
             <div class="w-40">
               <h3 class="text-lg font-medium mb-3">Learn More</h3>
               <div class="text-sm opacity-90 leading-7">
-                <router-link to="/about">About us</router-link><br />
+                <router-link to="/AboutView">About us</router-link><br />
                 <!-- <router-link to="/terms">Terms of use</router-link><br /> -->
-                <router-link to="/contact">Contact Us</router-link><br />
+                <router-link to="/ContactView">Contact Us</router-link><br />
                 <!-- <router-link to="/faqs">FAQs</router-link> -->
               </div>
             </div>
