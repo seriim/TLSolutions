@@ -60,49 +60,6 @@
       </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100 max-sm:py-5">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center bg-clip-text text-black mb-12">
-          Our Pricing
-        </h2>
-        <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <Card :isCard="true" class="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-            <CardHeader :isCardHeader="true" class="text-center pb-4">
-              <DollarSign class="w-12 h-12 mx-auto mb-4 text-blue-600" />
-              <CardTitle :isCardTitle="true" class="text-xl">Service Fee</CardTitle>
-              <div class="mt-4">
-                <div class="text-3xl font-bold">USD $25</div>
-                <div class="text-sm text-gray-500">JMD $4,000</div>
-              </div>
-            </CardHeader>
-          </Card>
-
-          <Card :isCard="true" class="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-            <CardHeader :isCardHeader="true" class="text-center pb-4">
-              <DollarSign class="w-12 h-12 mx-auto mb-4 text-purple-600" />
-              <CardTitle :isCardTitle="true" class="text-xl">U.S. Embassy Fee</CardTitle>
-              <div class="mt-4">
-                <div class="text-3xl font-bold">USD $160</div>
-                <div class="text-sm text-gray-500">JMD $24,800</div>
-              </div>
-            </CardHeader>
-          </Card>
-
-          <Card :isCard="true" class="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
-            <CardHeader :isCardHeader="true" class="text-center pb-4">
-              <DollarSign class="w-12 h-12 mx-auto mb-4 text-white" />
-              <CardTitle :isCardTitle="true" class="text-xl text-white">Total Cost</CardTitle>
-              <div class="mt-4">
-                <div class="text-3xl font-bold">USD $185</div>
-                <div class="text-sm text-gray-100">JMD $28,800</div>
-              </div>
-            </CardHeader>
-          </Card>
-        </div>
-      </div>
-    </section>
-
     <!-- Documents Section -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -153,6 +110,51 @@
         </div>
       </div>
     </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100 max-sm:py-5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center bg-clip-text text-black mb-12">
+          Our Pricing
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <Card :isCard="true" class="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+            <CardHeader :isCardHeader="true" class="text-center pb-4">
+              <DollarSign class="w-12 h-12 mx-auto mb-4 text-blue-600" />
+              <CardTitle :isCardTitle="true" class="text-xl">Service Fee</CardTitle>
+              <div class="mt-4">
+                <div class="text-3xl font-bold">USD $25</div>
+                <div class="text-sm text-gray-500">JMD $4,000</div>
+              </div>
+            </CardHeader>
+          </Card>
+
+          <Card :isCard="true" class="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+            <CardHeader :isCardHeader="true" class="text-center pb-4">
+              <DollarSign class="w-12 h-12 mx-auto mb-4 text-purple-600" />
+              <CardTitle :isCardTitle="true" class="text-xl">U.S. Embassy Fee</CardTitle>
+              <div class="mt-4">
+                <div class="text-3xl font-bold">USD $160</div>
+                <div class="text-sm text-gray-500">JMD $24,800</div>
+              </div>
+            </CardHeader>
+          </Card>
+
+          <Card :isCard="true" class="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+            <CardHeader :isCardHeader="true" class="text-center pb-4">
+              <DollarSign class="w-12 h-12 mx-auto mb-4 text-white" />
+              <CardTitle :isCardTitle="true" class="text-xl text-white">Total Cost</CardTitle>
+              <div class="mt-4">
+                <div class="text-3xl font-bold">USD $185</div>
+                <div class="text-sm text-gray-100">JMD $28,800</div>
+              </div>
+            </CardHeader>
+          </Card>
+        </div>
+      </div>
+    </section>
+
+    
   </div>
 </template>
 
