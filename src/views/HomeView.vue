@@ -24,7 +24,7 @@
         </div>
 
         <!-- Right content -->
-        <div class="flex-1 w-full lg:w-auto slide-right max-sm:hidden">
+        <div class="flex-1 w-full lg:w-auto slide-right ">
           <HeroCard
             image="https://ezy2nf0evx.ufs.sh/f/esJyRudlUqbDlldud6DYWUj6G0SZLHuzv2kQt37XN5MyVqoT"
             altText="Professional tax services"
@@ -140,7 +140,7 @@
         />
         <PricingCard
           plan="Try Hard"
-          :features="['Help with creating a Resume', 'Consultation', 'Visa Interview Prep', 'Visa Application', 'Premium Support']"
+          :features="['Help with creating a Resume', '30 minutes Consultation', 'Visa Interview Prep', 'Visa Application', 'Premium Support']"
           :price="7000"
           buttonText="Contact"
           bgColor="bg-white"
@@ -157,7 +157,7 @@
         <PricingCard
           plan="Basic Tax"
           :features="['Tax Filing', 'Deduction Optimization', 'General Support']"
-          :price="3000"
+          :price="6300"
           buttonText="Start now"
           bgColor="bg-white"
           textColor="text-black"
@@ -168,8 +168,8 @@
         />
         <PricingCard
           plan="Professional Tax"
-          :features="['Tax Filing', 'Deduction Optimization', 'Audit Support', 'Premium Support']"
-          :price="4000"
+          :features="['Tax Filing', 'Deduction Optimization', , 'Same day Filing', 'Premium Support']"
+          :price="7000"
           buttonText="Start now"
           bgColor="bg-black"
           textColor="text-white"
@@ -180,8 +180,8 @@
         />
         <PricingCard
           plan="Premium Tax"
-          :features="['Tax Filing', 'Deduction Optimization', 'Audit Support', 'Financial Planning', 'Premium Support']"
-          :price="5000"
+          :features="['Tax Filing', 'Deduction Optimization', 'Same day Filing', 'Learn how to file taxes', 'Premium Support']"
+          :price="10000"
           buttonText="Contact"
           bgColor="bg-white"
           textColor="text-black"

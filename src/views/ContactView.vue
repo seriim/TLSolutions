@@ -77,7 +77,7 @@
             </div>
           </transition>
           <transition name="fade" appear>
-            <div class="mt-8 lg:mt-0 max-sm:hidden" >
+            <div class="mt-8 lg:mt-0" >
               <img
                 class="h-full w-full object-cover rounded-lg shadow-xl"
                 src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21"
@@ -115,7 +115,7 @@ onMounted(() => {
 const handleSubmit = async () => {
   loading.value = true;
   try {
-    const response = await fetch('https://formsubmit.co/serenamorrisb012@gmail.com', {
+    const response = await fetch('https://formsubmit.co/truelinessolutions@gmail.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData.value),

@@ -25,7 +25,7 @@
           </div>
 
           <!-- Right Side (Image) -->
-          <div class="relative max-sm:hidden hero-image">
+          <div class="relative  hero-image">
             <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-20"></div>
             <img
               src="../assets/images/VisaImage1.jpg"
