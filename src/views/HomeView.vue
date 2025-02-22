@@ -168,7 +168,7 @@
         />
         <PricingCard
           plan="Professional Tax"
-          :features="['Tax Filing', 'Deduction Optimization', , 'Same day Filing', 'Premium Support']"
+          :features="['Tax Filing', 'Deduction Optimization', 'Same day Filing', 'Premium Support']"
           :price="7000"
           buttonText="Start now"
           bgColor="bg-black"
