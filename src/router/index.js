@@ -23,3 +23,13 @@ const router = createRouter({
 })
 
 export default router
+
+const app = createApp(App);
+
+router.afterEach((to) => {
+  if (window.gtag) {
+    window.gtag('config', 'G-PBWBZFXYTV', { page_path: to.fullPath });
+  }
+});
+
+app.use(router).mount('#app');
