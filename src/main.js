@@ -14,7 +14,7 @@ router.afterEach((to) => {
       window.gtag('config', 'G-PBWBZFXYTV', { page_path: to.fullPath });
     }
   });
-  
-app.use(router).mount('#app');
+
+app.use(router)
 app.use(Toast);
 app.mount('#app');
