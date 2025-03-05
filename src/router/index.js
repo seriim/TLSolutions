@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import App from './App.vue';
 import HomeView from '@/views/HomeView.vue'
 import VisaView from '@/views/VisaView.vue'
 import AboutView from '@/views/AboutView.vue'
@@ -25,12 +24,4 @@ const router = createRouter({
 
 export default router
 
-const app = createApp(App);
 
-router.afterEach((to) => {
-  if (window.gtag) {
-    window.gtag('config', 'G-PBWBZFXYTV', { page_path: to.fullPath });
-  }
-});
-
-app.use(router).mount('#app');
