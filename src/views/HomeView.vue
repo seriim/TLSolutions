@@ -1,4 +1,7 @@
 <template>
+  <head>
+    <meta name="google-site-verification" content="-EzOBkRanxAvBZqMz4ildnFjWFAI4Chleq1-twc29rI" />
+  </head>
   <div class="flex flex-col items-center font-CustomFont">
     <!-- Hero section -->
     <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 fade-in">
