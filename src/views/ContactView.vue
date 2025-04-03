@@ -14,7 +14,7 @@
                   Have questions about our services? Need assistance with your visa or tax matters?
                   Fill out the form below and we'll get back to you as soon as possible.
                 </p>
-                <form @submit.prevent="handleSubmit" class="mt-8 space-y-6">
+                <form action="https://formsubmit.co/truelinessolutions@gmail.com" method="POST" @submit.prevent="handleSubmit" class="mt-8 space-y-6">
                   <transition name="fade" appear>
                     <div>
                       <input 

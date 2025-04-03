@@ -1,4 +1,7 @@
 <template>
+  <head>
+    <meta name="google-site-verification" content="-EzOBkRanxAvBZqMz4ildnFjWFAI4Chleq1-twc29rI" />
+  </head>
   <NavBar/>
   <div class="flex flex-col items-center center font-CustomFontl mx-10 my-5">
     
