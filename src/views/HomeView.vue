@@ -160,7 +160,7 @@
         <PricingCard
           plan="Basic Tax"
           :features="['Tax Filing', 'Deduction Optimization', 'General Support']"
-          :price="6300"
+          :price="6500"
           buttonText="Start now"
           bgColor="bg-white"
           textColor="text-black"
