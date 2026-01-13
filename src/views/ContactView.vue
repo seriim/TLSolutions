@@ -141,27 +141,46 @@ const handleSubmit = async () => {
   loading.value = true;
   try {
     // Send email using EmailJS
+    const templateParams = {
+      from_name: formData.value.name,
+      from_email: formData.value.email,
+      phone: formData.value.phone || 'Not provided',
+      message: formData.value.message,
+      to_email: RECIPIENT_EMAIL,
+    };
+
+    console.log('Sending email with params:', templateParams);
+    console.log('Using Service ID:', EMAILJS_SERVICE_ID);
+    console.log('Using Template ID:', EMAILJS_TEMPLATE_ID);
+
     const response = await emailjs.send(
       EMAILJS_SERVICE_ID,
       EMAILJS_TEMPLATE_ID,
-      {
-        from_name: formData.value.name,
-        from_email: formData.value.email,
-        phone: formData.value.phone || 'Not provided',
-        message: formData.value.message,
-        to_email: RECIPIENT_EMAIL,
-      }
+      templateParams
     );
 
-    if (response.status === 200) {
+    console.log('EmailJS response:', response);
+
+    if (response.status === 200 || response.text === 'OK') {
       toast.success("Your message has been sent successfully! We'll get back to you soon.");
       formData.value = { name: '', email: '', phone: '', message: '' };
     } else {
+      console.error('Unexpected response:', response);
       toast.error("Something went wrong. Please try again.");
     }
   } catch (error) {
-    console.error('EmailJS error:', error);
-    toast.error("Error sending message. Please try again later.");
+    console.error('EmailJS error details:', error);
+    console.error('Error status:', error.status);
+    console.error('Error text:', error.text);
+    
+    // Show more specific error messages
+    if (error.text) {
+      toast.error(`Error: ${error.text}`);
+    } else if (error.message) {
+      toast.error(`Error: ${error.message}`);
+    } else {
+      toast.error("Error sending message. Please check the console for details.");
+    }
   } finally {
     loading.value = false;
   }
