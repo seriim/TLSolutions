@@ -14,7 +14,7 @@
                   Have questions about our services? Need assistance with your visa or tax matters?
                   Fill out the form below and we'll get back to you as soon as possible.
                 </p>
-                <form action="https://formsubmit.co/truelinessolutions@gmail.com" method="POST" @submit.prevent="handleSubmit" class="mt-8 space-y-6">
+                <form @submit.prevent="handleSubmit" class="mt-8 space-y-6">
                   <transition name="fade" appear>
                     <div>
                       <input 
@@ -65,7 +65,7 @@
                     <div>
                       <button 
                         type="submit"
-                        class="w-full sm:w-auto px-8 py-3 text-base font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-in-out"
+                        class="w-full sm:w-auto px-8 py-3 text-base font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed"
                         :disabled="loading"
                       >
                         {{ loading ? 'Sending...' : 'Send Message' }}
@@ -94,6 +94,14 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useToast } from 'vue-toastification';
+import emailjs from '@emailjs/browser';
+
+// EmailJS configuration - loaded from environment variables
+// Create a .env file in the root directory with these variables
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const RECIPIENT_EMAIL = import.meta.env.VITE_RECIPIENT_EMAIL || 'truelinessolutions@gmail.com';
 
 const formData = ref({
   name: '',
@@ -110,27 +118,53 @@ onMounted(() => {
   if (page.value) {
     page.value.classList.remove("opacity-0");
   }
+  // Initialize EmailJS if public key is available
+  if (EMAILJS_PUBLIC_KEY) {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+  }
 });
 
 const handleSubmit = async () => {
+  // Validate form
+  if (!formData.value.name || !formData.value.email || !formData.value.message) {
+    toast.error("Please fill in all required fields.");
+    return;
+  }
+
+  // Validate EmailJS configuration
+  if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+    toast.error("Email service is not configured. Please contact the administrator.");
+    loading.value = false;
+    return;
+  }
+
   loading.value = true;
   try {
-    const response = await fetch('https://formsubmit.co/truelinessolutions@gmail.com', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData.value),
-    });
+    // Send email using EmailJS
+    const response = await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      {
+        from_name: formData.value.name,
+        from_email: formData.value.email,
+        phone: formData.value.phone || 'Not provided',
+        message: formData.value.message,
+        to_email: RECIPIENT_EMAIL,
+      }
+    );
 
-    if (response.ok) {
-      toast.success("Your message has been sent successfully!");
+    if (response.status === 200) {
+      toast.success("Your message has been sent successfully! We'll get back to you soon.");
       formData.value = { name: '', email: '', phone: '', message: '' };
     } else {
       toast.error("Something went wrong. Please try again.");
     }
   } catch (error) {
-    toast.error("Error sending message.");
+    console.error('EmailJS error:', error);
+    toast.error("Error sending message. Please try again later.");
+  } finally {
+    loading.value = false;
   }
-  loading.value = false;
 };
 </script>
 
