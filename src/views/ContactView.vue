@@ -101,7 +101,6 @@ import emailjs from '@emailjs/browser';
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-const RECIPIENT_EMAIL = import.meta.env.VITE_RECIPIENT_EMAIL || 'truelinessolutions@gmail.com';
 
 const formData = ref({
   name: '',
@@ -146,7 +145,6 @@ const handleSubmit = async () => {
       from_email: formData.value.email,
       phone: formData.value.phone || 'Not provided',
       message: formData.value.message,
-      to_email: RECIPIENT_EMAIL,
     };
 
     console.log('Sending email with params:', templateParams);
